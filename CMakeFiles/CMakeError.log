@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3e6b9/fast 
+/usr/bin/make -f CMakeFiles/cmTC_3e6b9.dir/build.make CMakeFiles/cmTC_3e6b9.dir/build
+make[1] : on entre dans le répertoire « /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_3e6b9.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -std=gnu++11 -o CMakeFiles/cmTC_3e6b9.dir/CheckSymbolExists.cxx.o -c /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_3e6b9
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e6b9.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_3e6b9.dir/CheckSymbolExists.cxx.o  -o cmTC_3e6b9 
+CMakeFiles/cmTC_3e6b9.dir/CheckSymbolExists.cxx.o : Dans la fonction « main » :
+CheckSymbolExists.cxx:(.text+0x1b) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3e6b9.dir/build.make:86: recipe for target 'cmTC_3e6b9' failed
+make[1]: *** [cmTC_3e6b9] Error 1
+make[1] : on quitte le répertoire « /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp »
+Makefile:121: recipe for target 'cmTC_3e6b9/fast' failed
+make: *** [cmTC_3e6b9/fast] Error 2
+
+File /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1c39b/fast 
+/usr/bin/make -f CMakeFiles/cmTC_1c39b.dir/build.make CMakeFiles/cmTC_1c39b.dir/build
+make[1] : on entre dans le répertoire « /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_1c39b.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++11 -o CMakeFiles/cmTC_1c39b.dir/CheckFunctionExists.cxx.o -c /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_1c39b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c39b.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1c39b.dir/CheckFunctionExists.cxx.o  -o cmTC_1c39b -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1c39b.dir/build.make:86: recipe for target 'cmTC_1c39b' failed
+make[1]: *** [cmTC_1c39b] Error 1
+make[1] : on quitte le répertoire « /home/nathan/epitech_project/OOP_indie_studio_2018/CMakeFiles/CMakeTmp »
+Makefile:121: recipe for target 'cmTC_1c39b/fast' failed
+make: *** [cmTC_1c39b/fast] Error 2
+
+
